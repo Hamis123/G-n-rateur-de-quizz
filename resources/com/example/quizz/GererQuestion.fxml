@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="480.0" prefWidth="728.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.quizz.GererQuestionController">
+    <children>
+        <AnchorPane prefHeight="487.0" prefWidth="141.0" style="-fx-background-color: green;">
+            <children>
+                <ImageView fitHeight="58.0" fitWidth="50.0" layoutX="46.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../images/avatar-removebg-preview.png" />
+                    </image>
+                </ImageView>
+                <Button layoutX="12.0" layoutY="279.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="118.0" style="-fx-background-color: white;" text="Consulter Quizz" />
+                <Button layoutX="12.0" layoutY="217.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="118.0" style="-fx-background-color: white;" text="Creation des Quizz" />
+                <Hyperlink layoutX="41.0" layoutY="426.0" onAction="#deconnecterOnClick" prefHeight="23.0" prefWidth="60.0" text="Retour" textFill="#220000">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font></Hyperlink>
+                <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="13.0" layoutY="386.0" pickOnBounds="true" preserveRatio="true" />
+                <ImageView fitHeight="23.0" fitWidth="50.0" layoutX="11.0" layoutY="426.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../images/backward_5464960-removebg-preview.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <HBox layoutX="159.0" layoutY="22.0" prefHeight="97.0" prefWidth="444.0" style="-fx-background-color: #d5e9eb; -fx-background-radius: 10;">
+            <children>
+                <Text fill="#58a468d4" strokeType="OUTSIDE" strokeWidth="0.0" text="La gestion des questions !" wrappingWidth="386.9830722808838">
+                    <HBox.margin>
+                        <Insets left="20.0" right="5.0" top="15.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font name="System Bold" size="25.0" />
+                    </font>
+                </Text>
+                <Text fill="#434646" strokeType="OUTSIDE" strokeWidth="0.0" text="Votre page d'accueil est votre aliiée: elle vous indique les taches à accomplir." wrappingWidth="413.446533203125">
+                    <HBox.margin>
+                        <Insets bottom="20.0" left="-390.0" top="60.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font size="11.0" />
+                    </font>
+                </Text>
+            </children>
+        </HBox>
+        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="125.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="639.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../images/gestion%20quizz.png" />
+            </image>
+        </ImageView>
+        <Button layoutX="630.0" layoutY="164.0" mnemonicParsing="false" onAction="#CreerQuestionOnAction" prefHeight="40.0" prefWidth="81.0" style="-fx-background-color: green;" text="Creation" textFill="#fffbfb" />
+        <Button layoutX="626.0" layoutY="318.0" mnemonicParsing="false" onAction="#handleModifyButtonAction" prefHeight="40.0" prefWidth="89.0" style="-fx-background-color: orange;" text="Modification" textFill="WHITE" />
+        <Button layoutX="630.0" layoutY="235.0" mnemonicParsing="false" onAction="#handleDeleteButtonAction" prefHeight="40.0" prefWidth="81.0" style="-fx-background-color: red;" text="suppression" textFill="WHITE" />
+        <Button layoutX="622.0" layoutY="403.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="89.0" style="-fx-background-color: yellow;" text="Consultation" textFill="WHITE" />
+        <TableView fx:id="questionTableView" layoutX="171.0" layoutY="164.0" prefHeight="270.0" prefWidth="420.0">
+            <columns>
+                <TableColumn fx:id="idQuestionColumn" prefWidth="95.0" text="Numero" />
+                <TableColumn fx:id="questionTextColumn" prefWidth="141.0" text="Question" />
+            <TableColumn fx:id="niveauColumn" prefWidth="92.0" text="Niveau" />
+            <TableColumn fx:id="NomCoursColumn" minWidth="0.0" prefWidth="91.0" text="Matiere" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

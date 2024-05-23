@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.quizz.AjouterQuestionController">
+   <children>
+      <Label alignment="CENTER" layoutX="121.0" layoutY="26.0" prefHeight="30.0" prefWidth="385.0" text="Créer un question avec choix multiple" textFill="#28a2ab">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="138.0" layoutY="157.0" prefHeight="17.0" prefWidth="79.0" text="Question :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Pane layoutY="-3.0" prefHeight="407.0" prefWidth="114.0" style="-fx-background-color: green;">
+         <children>
+            <ImageView fitHeight="52.0" fitWidth="49.0" layoutX="15.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/avatar-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <Hyperlink layoutX="40.0" layoutY="350.0" onAction="#deconnecterOnClick" text="Retour" textFill="#030303">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Hyperlink>
+            <ImageView fitHeight="36.0" fitWidth="42.0" layoutY="344.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/backward_5464960-removebg-preview.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <TextField fx:id="questionTextField" layoutX="230.0" layoutY="145.0" prefHeight="30.0" prefWidth="279.0" />
+      <Label layoutX="150.0" layoutY="93.0" prefHeight="17.0" prefWidth="79.0" text="Niveau :" textFill="#249724">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="facileRadioButton" layoutX="225.0" layoutY="94.0" mnemonicParsing="false" prefHeight="10.0" prefWidth="97.0" text="Facile">
+         <font>
+            <Font size="11.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="niveau" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="moyenRadioButton" layoutX="339.0" layoutY="87.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="79.0" text="Moyen" toggleGroup="$niveau">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="difficileRadioButton" layoutX="465.0" layoutY="86.0" mnemonicParsing="false" text="Difficile" toggleGroup="$niveau">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </RadioButton>
+      <ImageView fitHeight="58.0" fitWidth="87.0" layoutX="508.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/reponces.jpg.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="validerButton" layoutX="225.0" layoutY="307.0" mnemonicParsing="false" onAction="#onValidateButtonClick" prefHeight="30.0" prefWidth="79.0" style="-fx-background-color: green; -fx-background-radius: 30;" text="Valider" textFill="#fffafa" />
+      <Button fx:id="annulerButton" layoutX="437.0" layoutY="307.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="79.0" style="-fx-background-color: red; -fx-background-radius: 30;" text="Annuler" textFill="#fffefe" />
+      <Label layoutX="139.0" layoutY="218.0" prefHeight="17.0" prefWidth="79.0" text="Matières :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="coursTextField" layoutX="231.0" layoutY="201.0" prefHeight="30.0" prefWidth="133.0" />
+   </children>
+</AnchorPane>

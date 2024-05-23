@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="480.0" prefWidth="728.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.quizz.EspaceAdminController">
+   <children>
+      <AnchorPane prefHeight="480.0" prefWidth="97.0" style="-fx-background-color: #7d8eff;">
+         <children>
+            <ImageView fitHeight="58.0" fitWidth="50.0" layoutX="15.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/avatar-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <Hyperlink layoutX="36.0" layoutY="412.0" onAction="#deconnecterOnClick" text="Retour">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Hyperlink>
+            <ImageView fitHeight="33.0" fitWidth="31.0" layoutY="408.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/backward_5464960-removebg-preview.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <HBox layoutX="108.0" layoutY="43.0" prefHeight="91.0" prefWidth="570.0" style="-fx-background-color: #d5e9eb; -fx-background-radius: 10;">
+         <children>
+            <Text fill="#3755ffd4" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenue Administrateur !" wrappingWidth="386.9830722808838">
+               <HBox.margin>
+                  <Insets left="20.0" right="5.0" top="15.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Text>
+            <Text fill="#434646" strokeType="OUTSIDE" strokeWidth="0.0" text="Votre page d'accueil est votre aliiée: elle vous indique les taches à accomplir." wrappingWidth="465.446533203125">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="-390.0" top="60.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="74.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/admin.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="-20.0" top="20.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
+      <Text fill="#3755ffd4" layoutX="117.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vos actions" wrappingWidth="386.9830722808838">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="#414143" layoutX="113.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Que souhaitez-vous faire ?" wrappingWidth="465.446533203125">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="125.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true" />
+      <HBox layoutX="104.0" layoutY="296.0" prefHeight="97.0" prefWidth="538.0">
+         <children>
+            <ImageView fitHeight="97.0" fitWidth="132.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/713351_flat_vector5-removebg-preview_1-removebg-preview.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fitHeight="86.0" fitWidth="113.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/4979937_50878-removebg-preview_1-removebg-preview%20(1).png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fitHeight="92.0" fitWidth="91.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@../../../images/Screenshot_20240413-024217-removebg-preview%20(2).png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="91.0" fitWidth="136.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/Screenshot_20240413-024656-removebg-preview_1-removebg-preview.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
+      <Button layoutX="119.0" layoutY="401.0" mnemonicParsing="false" onAction="#GererCoursOnAction" prefHeight="40.0" prefWidth="84.0" style="-fx-background-color: #7d8eff;" text="Gérer cours">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button layoutX="270.0" layoutY="401.0" mnemonicParsing="false" onAction="#GererGroupeOnAction" prefHeight="40.0" prefWidth="97.0" style="-fx-background-color: #7d8eff;" text="Gérer groupes">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="586.0" layoutY="401.0" mnemonicParsing="false" onAction="#GererEtudiantOnAction" prefHeight="40.0" prefWidth="106.0" style="-fx-background-color: #7d8eff;" text="Gérer étudiant">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button layoutX="428.0" layoutY="401.0" mnemonicParsing="false" onAction="#GererEnseignantOnAction" prefHeight="40.0" prefWidth="113.0" style="-fx-background-color: #7d8eff;" text="Gérer enseignant">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

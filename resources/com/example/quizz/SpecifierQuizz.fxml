@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.quizz.SpecifierQuizzController">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="112.0" style="-fx-background-color: green;">
+         <children>
+            <ImageView fitHeight="47.0" fitWidth="51.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/avatar-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="41.0" layoutX="9.0" layoutY="340.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/backward_5464960-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <Hyperlink layoutX="41.0" layoutY="341.0" onAction="#deconnecterOnClick" text="Retour" textFill="#070606">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Hyperlink>
+         </children></Pane>
+      <Label alignment="CENTER" layoutX="156.0" layoutY="5.0" prefHeight="27.0" prefWidth="407.0" text="Spécifier la Matière et le Niveau de votre Quizz" textFill="#29722f">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="156.0" layoutY="46.0" prefHeight="17.0" prefWidth="99.0" text="Matière : ">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="156.0" layoutY="80.0" prefHeight="17.0" prefWidth="70.0" text="Niveau : ">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="coursTextFiled" layoutX="243.0" layoutY="45.0" prefHeight="25.0" prefWidth="176.0" />
+      <RadioButton fx:id="facileRadioButton" layoutX="246.0" layoutY="84.0" mnemonicParsing="false" text="Facile">
+         <toggleGroup>
+            <ToggleGroup fx:id="niveau" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="moyenRadioButton" layoutX="367.0" layoutY="85.0" mnemonicParsing="false" text="Moyen" toggleGroup="$niveau" />
+      <RadioButton fx:id="difficileRadioButton" layoutX="493.0" layoutY="86.0" mnemonicParsing="false" text="Difficile" toggleGroup="$niveau" />
+      <Button layoutX="468.0" layoutY="336.0" mnemonicParsing="false" onAction="#CreerQuizzOnAction" prefHeight="33.0" prefWidth="112.0" style="-fx-background-color: GREEN;" text="Créer le Quizz" textFill="WHITE" />
+      <TableView fx:id="questionTableView" editable="true" layoutX="172.0" layoutY="128.0" prefHeight="258.0" prefWidth="200.0">
+        <columns>
+           <TableColumn fx:id="questionColumn" prefWidth="200" text="Questions">
+              <cellValueFactory>
+                 <PropertyValueFactory property="Questions" />
+              </cellValueFactory>
+           </TableColumn>
+
+        </columns>
+      </TableView>
+      <Button layoutX="458.0" layoutY="135.0" mnemonicParsing="false" onAction="#OKOnAction" prefHeight="27.0" prefWidth="76.0" style="-fx-background-color: GREEN;" text="OK" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

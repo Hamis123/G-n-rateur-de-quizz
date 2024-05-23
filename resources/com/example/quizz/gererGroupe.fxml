@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="480.0" prefWidth="728.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.quizz.gererGroupeController">
+    <children>
+        <AnchorPane prefHeight="480.0" prefWidth="150.0" style="-fx-background-color: #7d8eff;">
+            <children>
+                <ImageView fitHeight="58.0" fitWidth="50.0" layoutX="50.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../images/avatar-removebg-preview.png" />
+                    </image>
+                </ImageView>
+              <Button layoutX="22.0" layoutY="264.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="106.0" style="-fx-background-color: white;" text="Gérer cours" />
+              <Button layoutX="20.0" layoutY="200.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: white;" text="Gérer enseignant" />
+              <Button layoutX="22.0" layoutY="121.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="106.0" style="-fx-background-color: white;" text="Gérer étudiant" />
+            <Hyperlink layoutX="31.0" layoutY="426.0" onAction="#deconnecterOnClick" text="Se déconnecter" textFill="#511a1a" />
+            </children>
+        </AnchorPane>
+        <HBox layoutX="159.0" layoutY="22.0" prefHeight="97.0" prefWidth="434.0" style="-fx-background-color: #d5e9eb; -fx-background-radius: 10;">
+            <children>
+                <Text fill="#3755ffd4" strokeType="OUTSIDE" strokeWidth="0.0" text="La gestion des groupes !" wrappingWidth="386.9830722808838">
+                    <HBox.margin>
+                        <Insets left="20.0" right="5.0" top="15.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font name="System Bold" size="25.0" />
+                    </font>
+                </Text>
+                <Text fill="#434646" strokeType="OUTSIDE" strokeWidth="0.0" text="Votre page d'accueil est votre aliiée: elle vous indique les taches à accomplir." wrappingWidth="413.446533203125">
+                    <HBox.margin>
+                        <Insets bottom="20.0" left="-390.0" top="60.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font size="11.0" />
+                    </font>
+                </Text>
+            </children>
+        </HBox>
+        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="125.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="96.0" fitWidth="60.0" layoutX="654.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/4979937_50878-removebg-preview_1-removebg-preview%20(1).png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="groupeTableView" layoutX="238.0" layoutY="151.0" prefHeight="251.0" prefWidth="237.0">
+        <columns>
+          <TableColumn fx:id="idGroupeColumn" prefWidth="101.0" text="IdGroupe" />
+          <TableColumn fx:id="nomGroupeColumn" prefWidth="143.0" text="NomGroupe" />
+            <TableColumn minWidth="0.0" prefWidth="0.0" text="Mail" />
+            <TableColumn prefWidth="56.0" text="Column X" />
+            <TableColumn prefWidth="75.0" text="Column X" />
+            <TableColumn prefWidth="75.0" text="Column X" />
+        </columns>
+      </TableView>
+      <Button layoutX="608.0" layoutY="168.0" mnemonicParsing="false" onAction="#handleCreerButtonAction" prefHeight="40.0" prefWidth="106.0" style="-fx-background-color: green;" text="Creation" />
+      <Button layoutX="608.0" layoutY="273.0" mnemonicParsing="false" onAction="#handleModifyButtonAction" prefHeight="40.0" prefWidth="106.0" style="-fx-background-color: orange;" text="Modification" />
+      <Button layoutX="608.0" layoutY="220.0" mnemonicParsing="false" onAction="#handleDeleteButtonAction" prefHeight="40.0" prefWidth="106.0" style="-fx-background-color: red;" text="suppression" />
+      <Button layoutX="608.0" layoutY="332.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="106.0" style="-fx-background-color: yellow;" text="Consultation" />
+    </children>
+</AnchorPane>

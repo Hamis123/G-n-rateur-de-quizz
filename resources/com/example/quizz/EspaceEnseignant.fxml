@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="480.0" prefWidth="728.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.quizz.EspaceEnseignantController">
+    <children>
+        <AnchorPane prefHeight="480.0" prefWidth="110.0" style="-fx-background-color: green;">
+            <children>
+                <ImageView fitHeight="58.0" fitWidth="50.0" layoutX="26.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../images/avatar-removebg-preview.png" />
+                    </image>
+                </ImageView>
+            <ImageView fitHeight="33.0" fitWidth="41.0" layoutX="1.0" layoutY="414.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/backward_5464960-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <Hyperlink layoutX="37.0" layoutY="419.0" onAction="#deconnecterOnClick" text="Retour" textFill="#0a0909">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Hyperlink>
+            </children>
+        </AnchorPane>
+        <HBox layoutX="125.0" layoutY="40.0" prefHeight="97.0" prefWidth="573.0" style="-fx-background-color: #d5e9eb; -fx-background-radius: 10;">
+            <children>
+                <Text fill="#117943d4" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenue Enseignant !" wrappingWidth="386.9830722808838">
+                    <HBox.margin>
+                        <Insets left="20.0" right="5.0" top="15.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font name="System Bold" size="25.0" />
+                    </font>
+                </Text>
+                <Text fill="#434646" strokeType="OUTSIDE" strokeWidth="0.0" text="Votre page d'accueil est votre aliiée: elle vous indique les taches à accomplir." wrappingWidth="465.446533203125">
+                    <HBox.margin>
+                        <Insets bottom="20.0" left="-390.0" top="60.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font size="11.0" />
+                    </font>
+                </Text>
+                <ImageView fitHeight="57.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../images/Screenshot_20240413-024217-removebg-preview%20(2).png" />
+                    </image>
+                    <HBox.margin>
+                        <Insets left="-20.0" top="20.0" />
+                    </HBox.margin>
+                </ImageView>
+            </children>
+        </HBox>
+        <Text fill="#118a39d4" layoutX="134.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vos actions" wrappingWidth="386.9830722808838">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Text>
+        <Text fill="#414143" layoutX="134.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Que souhaitez-vous faire ?" wrappingWidth="465.446533203125">
+            <font>
+                <Font size="11.0" />
+            </font>
+        </Text>
+        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="125.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true" />
+        <HBox layoutX="135.0" layoutY="296.0" prefHeight="98.0" prefWidth="579.0">
+            <children>
+                <ImageView fitHeight="97.0" fitWidth="132.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../images/gestion%20quizz.png" />
+                    </image>
+                    <HBox.margin>
+                        <Insets left="10.0" />
+                    </HBox.margin>
+                </ImageView>
+                <ImageView fitHeight="91.0" fitWidth="142.0" pickOnBounds="true" preserveRatio="true">
+                    <HBox.margin>
+                        <Insets left="120.0" />
+                    </HBox.margin>
+                    <image>
+                        <Image url="@../../../images/consulter%20quizz.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="98.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../images/gerer%20question.png" />
+                    </image>
+                    <HBox.margin>
+                        <Insets left="110.0" />
+                    </HBox.margin>
+                </ImageView>
+            </children>
+        </HBox>
+        <Button layoutX="124.0" layoutY="401.0" mnemonicParsing="false" onAction="#GererQuestionOnAction" prefHeight="40.0" prefWidth="133.0" style="-fx-background-color: green;" text="Gestion des questions" textFill="WHITE" />
+        <Button layoutX="353.0" layoutY="401.0" mnemonicParsing="false" onAction="#GererQuizzOnAction" prefHeight="40.0" prefWidth="133.0" style="-fx-background-color: green;" text="Creation des Quizs" textFill="#f5efef" />
+        <Button layoutX="589.0" layoutY="402.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: green;" text="Consultater Quizz" textFill="#fffefe" />
+    </children>
+</AnchorPane>
